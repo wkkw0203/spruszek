@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.countdown {
+    text-align: center;
+    margin: 10px 0 30px 0;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+#timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#timer span {
+    display: inline-block;
+    min-width: 60px;
+    padding: 12px;
+    background: #333;
+    border-radius: 10px;
+    margin: 0 5px;
+    color: #fff;
+}
+
+.predictions {
+    flex: 0 1 400px;
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.prediction-form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prediction-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    font-size: 1rem;
+}
+
+.prediction-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #666;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.prediction-form button:hover {
+    background: #777;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.delete-btn {
+    background: #ff4444;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #ff6666;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .predictions {
+        min-width: 300px;
+        width: 95%;
+    }
+    
+    h1, h2 {
+        font-size: 2rem;
+    }
+    
+    #timer {
+        font-size: 2.5rem;
+    }
+    
+    #timer span {
+        min-width: 70px;
+        padding: 10px;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 60px;
+    margin-top: 10px;
+    height: calc(100vh - 200px);
+    align-items: flex-start;
+}
+
+.image-container {
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+} 
